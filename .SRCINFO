@@ -1,7 +1,7 @@
 pkgbase = linux-cachyos-cjktty
 	pkgdesc = CachyOS Linux kernel with cjktty patches
 	pkgver = 7.1.rc5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/CachyOS/linux-cachyos
 	arch = x86_64
 	license = GPL-2.0-only
@@ -30,12 +30,12 @@ pkgbase = linux-cachyos-cjktty
 	options = !strip
 	options = !debug
 	options = !lto
-	source = https://github.com/CachyOS/linux/releases/download/cachyos-7.1-rc5-1/cachyos-7.1-rc5-1.tar.gz
+	source = https://github.com/CachyOS/linux/releases/download/cachyos-7.1-rc5-2/cachyos-7.1-rc5-2.tar.gz
 	source = config
 	source = https://raw.githubusercontent.com/Capricornus007/cjktty-patches/master/v7.x/cjktty-7.1.patch
 	source = https://raw.githubusercontent.com/Capricornus007/cjktty-patches/master/cjktty-add-cjk32x32-font-data.patch
 	source = https://raw.githubusercontent.com/cachyos/kernel-patches/master/7.1/misc/dkms-clang.patch
-	b2sums = bb0e3319cc111637b687bbb550d9f431fde2516cb6610a15ab66cb090dc52f442134e95ab1721ac3342f6e3445eb8a010f97788c8f87af5669e5bb0e81ff1dc9
+	b2sums = b6734750e412140b728a6d18938c74a36bda5f2fb8f8658e3fb23b6cf13688d2f1c76fbf4d5337a80891ef77ade1fd70a80e8b7e4b5474f3b4c0cf4c3f3ff7cb
 	b2sums = 884b9a1d8400821568732d5e567c691145200b5bc6fb5c731c4267dfa9c007c0cfc7921b1c972fcddfb5a2132e222b85f06804f434446319cef51714a2664500
 	b2sums = b9d54668b9644ef6925ac9eda4ce14864f7455ea68df13816530eb58250d65a6ebbb7e6b4fcf69fbe84ff05fedf13bab528f36c9a913f693f927128461dd09a7
 	b2sums = 0fc62c36be0f2cfa9e0c8c716b6e9dc94fd79a228eeae82211c0ceda9344595af13ebe54cfbefb01e5037f428eb193bf4d7d650ee8ac1b8602f12bf30699e6e6
@@ -57,7 +57,7 @@ pkgname = linux-cachyos-cjktty
 	provides = NTSYNC-MODULE
 	provides = VHBA-MODULE
 	provides = ADIOS-MODULE
-	provides = linux-cachyos-cjktty-lto=7.1.rc5-1
+	provides = linux-cachyos-cjktty-lto=7.1.rc5-2
 	replaces = linux-cachyos-cjktty-lto
 
 pkgname = linux-cachyos-cjktty-headers
@@ -76,5 +76,5 @@ pkgname = linux-cachyos-cjktty-headers
 	depends = llvm
 	depends = lld
 	provides = LINUX-HEADERS
-	provides = linux-cachyos-cjktty-lto-headers=7.1.rc5-1
+	provides = linux-cachyos-cjktty-lto-headers=7.1.rc5-2
 	replaces = linux-cachyos-cjktty-lto-headers
