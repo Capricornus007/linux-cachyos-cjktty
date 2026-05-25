@@ -506,7 +506,7 @@ prepare() {
     ### Rewrite configuration
     echo "Rewrite configuration..."
     make "${BUILD_FLAGS[@]}" prepare
-    yes "" | make "${BUILD_FLAGS[@]}" config >/dev/null
+    yes "" | make "${BUILD_FLAGS[@]}" olddefconfig >/dev/null
     diff -u ../config .config || :
 
     ### Prepared version
