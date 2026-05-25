@@ -176,14 +176,14 @@ else
 fi
 
 pkgbase="linux-$_pkgsuffix"
-_major=7.0
-_minor=10
+_major=7.1
+#_minor=10
 #_minorc=$((_minor+1))
-#_rcver=rc8
-pkgver=${_major}.${_minor}
-_tagrel=2
-pkgrel=2
-_srcname=cachyos-${_major}.${_minor}-${_tagrel}
+_rcver=rc5
+pkgver=${_major}.${_rcver}
+_tagrel=1
+pkgrel=1
+_srcname=cachyos-${_major}-${_rcver}-${_tagrel}
 pkgdesc='CachyOS Linux kernel with cjktty patches'
 _kernver="$pkgver-$pkgrel"
 _kernuname="${pkgver}-${_pkgsuffix}"
@@ -221,7 +221,7 @@ _nv_open_pkg="NVIDIA-kernel-module-source-${_nv_ver}"
 source=(
     "https://github.com/CachyOS/linux/releases/download/${_srcname}/${_srcname}.tar.gz"
     "config"
-    "${_cjktty_source}/v7.x/cjktty-7.0.8.patch"
+    "${_cjktty_source}/v7.x/cjktty-7.1.patch"
     "${_cjktty_source}/cjktty-add-cjk32x32-font-data.patch")
 
 # LLVM makedepends
@@ -822,8 +822,8 @@ for _p in "${pkgname[@]}"; do
     }"
 done
 
-b2sums=('299e4476751b4c5caa6a34824ef017fb638f5eff811057058118fae70bda4cedbd7e856da5436f0cc32a3a73a27676f9340186b2aad324f7474edf6db73ce66a'
+b2sums=('bb0e3319cc111637b687bbb550d9f431fde2516cb6610a15ab66cb090dc52f442134e95ab1721ac3342f6e3445eb8a010f97788c8f87af5669e5bb0e81ff1dc9'
         '884b9a1d8400821568732d5e567c691145200b5bc6fb5c731c4267dfa9c007c0cfc7921b1c972fcddfb5a2132e222b85f06804f434446319cef51714a2664500'
-        'b546565721ec4d3ae240f784715d2811a8243f477754575c42baeb1e11a990e28d6816d4ab684a27166148ecea4f9aa8982415f4a2f3c1ba5df876f91e4a5b9b'
-        '101996793aeede5e456b23b35c2fd4af5c38fd363473dcdda0bce6e21d110a9f88a67e325b1ebf8efef4a7511f135c4f64ff1fc54b8ef925a5df8d6292ba7678'
+        'b9d54668b9644ef6925ac9eda4ce14864f7455ea68df13816530eb58250d65a6ebbb7e6b4fcf69fbe84ff05fedf13bab528f36c9a913f693f927128461dd09a7'
+        '0fc62c36be0f2cfa9e0c8c716b6e9dc94fd79a228eeae82211c0ceda9344595af13ebe54cfbefb01e5037f428eb193bf4d7d650ee8ac1b8602f12bf30699e6e6'
         'c992567bd7dd8553432be496ffa1c17e2f5ebe9c7edb51945cf977e1b742dd6517c210d8843bb82744ca705efd07f8027cd7dde41b50215ebd707a34aa81462e')
