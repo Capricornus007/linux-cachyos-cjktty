@@ -169,7 +169,7 @@ else
     _pkgsuffix=zen1th
 fi
 
-pkgbase="linux-$_pkgsuffix"
+pkgbase="linux-cachyos-cjktty"
 _major=7.2
 _minor=9
 #_minorc=$((_minor+1))
@@ -291,7 +291,7 @@ prepare() {
 
     echo "Setting version..."
     echo "-$pkgrel" > localversion.10-pkgrel
-    echo "${pkgbase#linux}" > localversion.20-pkgname
+    echo "-cjktty" > localversion.20-pkgname
 
     local src
     for patch in "${source[@]}"; do
