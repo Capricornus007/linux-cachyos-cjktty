@@ -162,11 +162,11 @@ _is_ci_build() {
 }
 
 if _is_lto_kernel && [ "$_use_lto_suffix" = "yes"  ]; then
-    _pkgsuffix=zenith-lto
+    _pkgsuffix=zen1th-lto
 elif ! _is_lto_kernel && [ "$_use_gcc_suffix" = "yes" ]; then
-    _pkgsuffix=zenith-gcc
+    _pkgsuffix=zen1th-gcc
 else
-    _pkgsuffix=zenith
+    _pkgsuffix=zen1th
 fi
 
 pkgbase="linux-$_pkgsuffix"
