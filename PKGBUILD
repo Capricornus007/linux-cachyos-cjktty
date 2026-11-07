@@ -162,11 +162,11 @@ _is_ci_build() {
 }
 
 if _is_lto_kernel && [ "$_use_lto_suffix" = "yes"  ]; then
-    _pkgsuffix=cachyos-cjktty-lto
+    _pkgsuffix=zenith-lto
 elif ! _is_lto_kernel && [ "$_use_gcc_suffix" = "yes" ]; then
-    _pkgsuffix=cachyos-cjktty-gcc
+    _pkgsuffix=zenith-gcc
 else
-    _pkgsuffix=cachyos-cjktty
+    _pkgsuffix=zenith
 fi
 
 pkgbase="linux-$_pkgsuffix"
