@@ -162,14 +162,14 @@ _is_ci_build() {
 }
 
 if _is_lto_kernel && [ "$_use_lto_suffix" = "yes"  ]; then
-    _pkgsuffix=zen1th-lto
+    _pkgsuffix=cachyos-cjktty-lto
 elif ! _is_lto_kernel && [ "$_use_gcc_suffix" = "yes" ]; then
-    _pkgsuffix=zen1th-gcc
+    _pkgsuffix=cachyos-cjktty-gcc
 else
-    _pkgsuffix=zen1th
+    _pkgsuffix=cachyos-cjktty
 fi
 
-pkgbase="linux-cachyos-cjktty"
+pkgbase="linux-$_pkgsuffix"
 _major=7.2
 _minor=9
 #_minorc=$((_minor+1))
@@ -291,7 +291,7 @@ prepare() {
 
     echo "Setting version..."
     echo "-$pkgrel" > localversion.10-pkgrel
-    echo "-cjktty" > localversion.20-pkgname
+    echo "${pkgbase#linux}" > localversion.20-pkgname
 
     local src
     for patch in "${source[@]}"; do
